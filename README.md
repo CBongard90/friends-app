@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 # friends-app
+This is a test app using Ruby on Rails and following the procedures by John Elder from Codemy.com
