@@ -7,21 +7,26 @@
       <th>Phone</th>
       <th>Email</th>
       <th>Twitter</th>
+      <th>User Id</th>
       <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @friends.each do |friend| %>
+      <%if friend.user == current_user %>
       <tr>
         <td><%= link_to friend.first_name+" "+friend.last_name, friend %></td>
         <td><%= friend.phone %></td>
         <td><%= friend.email %></td>
         <td><%= friend.twitter %></td>
+        <td><%= friend.user_id %></td>
         
-        
+        <%# if friend.user == current_user This method has a lot of possible bypass which makes the code easily hackable%>
         <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger btn-sm" %></td>
+        <%#end%>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
