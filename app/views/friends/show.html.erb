@@ -1,5 +1,8 @@
 <div class="p-5 mb-4 bg-light rounded-3">
   <div class="container-fluid py-5">
+    <div>
+      <%= image_tag(@friend.image ,:class => "friend_profile_picture") %>
+    </div>
     <h1 class="display-5 fw-bold"><%= @friend.first_name + " " + @friend.last_name %></h1>
     <p>
       <strong>Phone:</strong> 
